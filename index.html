@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Parking & Traffic Management</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#welcome-section">Home</a></li>
+      <li><a href="#map-section">Map</a></li>
+      <li><a href="#github-section">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="welcome-section">
+  <h1>Welcome to Smart Parking & Traffic Management</h1>
+  <p>Real-time updates for traffic and parking availability in your area.</p>
+  <button class="explore-btn" onclick="scrollToMap()">Explore Map</button>
+</div>
+
+<!-- Move Search Form Here -->
+<form id="search-form">
+  <input type="text" id="search-input" placeholder="Search for locations">
+  <button type="submit">Search</button>
+</form>
+
+<div id="map-section">
+  <div id="map"></div>
+</div>
+
+<div class="controls">
+  <button id="toggle-3d">3D View</button>
+  <button id="toggle-traffic">Traffic Layer</button>
+  <button id="toggle-route">Show Route</button>
+</div>
+
+<div id="distance"></div>
+
+<footer id="github-section">
+  <p>Github: </p>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+  function scrollToMap() {
+    document.getElementById('map-section').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
