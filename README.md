@@ -49,3 +49,7 @@ Here is an image of the viz created using notebook from microsoft fabric.
 
 My Workspace on microsoft fabric: 
 account: rkal0013@student.monash.edu
+
+Parking Spots: 
+![image](https://github.com/user-attachments/assets/0db16022-ec85-44c4-8ff8-8e7370b8e0e1)
+
