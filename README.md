@@ -47,8 +47,6 @@ I set up data pipelines to fetch real-time traffic and parking data from APIs li
 ![chart](https://github.com/user-attachments/assets/f32b84ba-2274-4df7-ade7-f1100ffd5e81)
 Here is an image of the viz created using notebook from microsoft fabric. 
 
-My Workspace on microsoft fabric: 
-account: rkal0013@student.monash.edu
 
 Parking Spots: 
 ![image](https://github.com/user-attachments/assets/0db16022-ec85-44c4-8ff8-8e7370b8e0e1)
