@@ -1,4 +1,4 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoicmthbDAwIiwiYSI6ImNsbGN5OTZydDA1ODUzbHFsOXA2OGNkanUifQ.kfzKRxqdHb1iVflmBIB4-A';
+mapboxgl.accessToken = 'access_token';
 
 const map = new mapboxgl.Map({
   container: 'map',
@@ -38,7 +38,7 @@ map.on('load', function() {
 
   async function fetchParkingData(userLocation) {
     const [longitude, latitude] = userLocation;
-    const response = await fetch(`https://api.tomtom.com/search/2/categorySearch/parking.json?key=NxXvnGv0nzzuEs6XwWkQuAPFW3yH80kK&lat=${latitude}&lon=${longitude}&categorySet=7369`);
+    const response = await fetch(`https://api.tomtom.com/search/2/categorySearch/parking.json?key=apikey&lat=${latitude}&lon=${longitude}&categorySet=7369`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
@@ -207,7 +207,7 @@ document.getElementById('search-form').addEventListener('submit', async function
   event.preventDefault();
   const query = document.getElementById('search-input').value;
   if (query) {
-    const response = await fetch(`https://api.tomtom.com/search/2/search/${query}.json?key=NxXvnGv0nzzuEs6XwWkQuAPFW3yH80kK`);
+    const response = await fetch(`https://api.tomtom.com/search/2/search/${query}.json?key=apikey`);
     const data = await response.json();
     if (data.results.length > 0) {
       const location = data.results[0].position;
